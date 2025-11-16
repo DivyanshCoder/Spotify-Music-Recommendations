@@ -1,0 +1,14 @@
+Django==5.1.5
+djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1
+psycopg2-binary==2.9.9
+celery==5.4.0
+redis==5.0.1
+django-redis==5.4.0
+python-dotenv==1.0.1
+requests==2.32.3
+django-cors-headers==4.3.1
+gunicorn==22.0.0
+pytest==8.2.2
+pytest-django==4.8.0
+pytest-cov==5.0.0
