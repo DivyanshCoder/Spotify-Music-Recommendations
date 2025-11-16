@@ -91,18 +91,18 @@ Before you begin, ensure you have the following installed on your system:
 ### Quick Start
 
 #### 1️⃣ Clone the Repository
-
 ```
 git clone https://github.com/yourusername/spotify-music-discovery.git
 cd spotify-music-discovery
 ```
 
 #### 2️⃣ Set Up Environment Variables
-
+```
 cp .env.example .env
+```
 
 Edit the `.env` file and add your Spotify credentials:
-
+```
 Django Settings
 DJANGO_SECRET_KEY=your-secret-key-change-in-production
 DEBUG=False
@@ -126,7 +126,7 @@ SPOTIFY_CLIENT_SECRET=your_spotify_client_secret_here
 
 CORS
 CORS_ORIGINS=http://localhost:3000,http://localhost:8000
-
+```
 
 #### 3️⃣ Get Spotify API Credentials
 
@@ -140,23 +140,26 @@ CORS_ORIGINS=http://localhost:3000,http://localhost:8000
 > **Note:** You can leave the Redirect URI field empty for this project.
 
 #### 4️⃣ Build and Start Services
-
+```
 docker-compose up --build -d
+```
 
 #### 5️⃣ Run Database Migrations
-
+```
 docker-compose exec web python manage.py migrate
+```
 
 #### 6️⃣ Create a Superuser (Optional)
-
+```
 docker-compose exec web python manage.py createsuperuser
+```
 
 #### 7️⃣ Verify Installation
 
 Check that all services are running:
-
+```
 docker-compose ps
-
+```
 
 You should see 6 services running:
 - ✅ `db` (PostgreSQL)
@@ -182,7 +185,7 @@ You should see 6 services running:
 ### Test the API
 
 Register a new user:
-
+```
 curl -X POST http://localhost/api/auth/register/
 -H "Content-Type: application/json"
 -d '{
@@ -195,39 +198,51 @@ curl -X POST http://localhost/api/auth/register/
 "favorite_artists": ["Coldplay"],
 "moods": ["energetic"]
 }'
+```
 
 Login and get JWT token:
-
+```
 curl -X POST http://localhost/api/auth/token/
 -H "Content-Type: application/json"
 -d '{
 "email": "test@example.com",
 "password": "TestPass123!"
 }'
+```
 
 ---
 
 ### Stopping the Application
 
 Stop all services
+```
 docker-compose down
+```
 
 Stop and remove volumes (⚠️ This will delete all data)
+```
 docker-compose down -v
+```
 
 ---
 
 ### View Logs
 
 View all logs
+```
 docker-compose logs
+```
 
 View specific service logs
+```
 docker-compose logs web
 docker-compose logs celery_worker
+```
 
 Follow logs in real-time
+```
 docker-compose logs -f
+```
 
 ---
 
@@ -236,16 +251,24 @@ docker-compose logs -f
 For development with hot-reload:
 
 Start in development mode
+```
 docker-compose up
+```
 
 Run tests
+```
 docker-compose exec web pytest
+```
 
 Access Django shell
+```
 docker-compose exec web python manage.py shell
+```
 
 Create new Django app
+```
 docker-compose exec web python manage.py startapp myapp
+```
 
 ---
 
