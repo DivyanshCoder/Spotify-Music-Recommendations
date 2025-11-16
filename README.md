@@ -274,38 +274,6 @@ docker-compose exec web python manage.py startapp myapp
 
 ## 📦 Project Structure After Installation
 
-spotify-music-discovery/
-├── 📂 backend/ # Django settings
-│ ├── settings.py # Main configuration
-│ ├── celery.py # Celery configuration
-│ ├── urls.py # Root URL routing
-│ └── wsgi.py # WSGI entry point
-├── 📂 users/ # User management
-│ ├── models.py # User model with preferences
-│ ├── serializers.py # User serializers
-│ ├── views.py # Authentication endpoints
-│ ├── urls.py # User URL routing
-│ └── tests.py # User tests
-├── 📂 recommendations/ # Recommendations logic
-│ ├── models.py # Recommendation model
-│ ├── serializers.py # Recommendation serializers
-│ ├── views.py # Recommendation endpoints
-│ ├── tasks.py # Celery tasks
-│ ├── spotify_client.py # Spotify API client
-│ ├── urls.py # Recommendation URL routing
-│ └── tests.py # Recommendation tests
-├── 📂 analytics/ # Analytics tracking
-│ ├── models.py # Activity tracking model
-│ ├── serializers.py # Analytics serializers
-│ ├── views.py # Analytics endpoints
-│ └── urls.py # Analytics URL routing
-├── 📂 nginx/ # Nginx configuration
-│ ├── Dockerfile # Nginx container
-│ └── nginx.conf # Nginx settings
-├── 📄 docker-compose.yml # Docker services
-├── 📄 Dockerfile # Django container
-├── 📄 requirements.txt # Python dependencies
-├── 📄 .env # Environment variables
-├── 📄 .gitignore # Git ignore rules
-├── 📄 pytest.ini # Pytest configuration
-└── 📄 README.md # This file
+<img width="445" height="245" alt="image" src="https://github.com/user-attachments/assets/6e7f1b49-8dab-4b41-a462-4ad7ced89a3a" />
+
+
