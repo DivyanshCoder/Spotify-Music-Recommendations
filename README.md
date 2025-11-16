@@ -92,8 +92,10 @@ Before you begin, ensure you have the following installed on your system:
 
 #### 1️⃣ Clone the Repository
 
+```
 git clone https://github.com/yourusername/spotify-music-discovery.git
 cd spotify-music-discovery
+```
 
 #### 2️⃣ Set Up Environment Variables
 
